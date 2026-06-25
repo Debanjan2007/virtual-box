@@ -1,5 +1,4 @@
 "use client"
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { MobileMenu } from "./MobileNav"
@@ -8,6 +7,9 @@ import { HeroTtile } from './hero-title'
 import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern"
 import { OrbitingCircles } from "@/components/ui/orbiting-circles"
 import { RippleButton } from "@/components/ui/ripple-button"
+import { Marquee } from "@/components/ui/marquee"
+import { WorkspaceCard } from "./WorkspaceCard"
+import { MarqueOS } from "./Marque-children-data"
 
 export default function Home() {
   return (
@@ -39,7 +41,7 @@ export default function Home() {
         </div>
       </nav>
       {/* main hero section here */}
-      <main>
+      <main className="flex flex-col">
         <AnimatedGridPattern
           className="absolute inset-0 opacity-35 text-slate-500/60 dark:text-slate-400/40"
         />
@@ -182,6 +184,14 @@ export default function Home() {
 
             </div>
           </div>
+        </div>
+        {/* second part the marquee part */}
+        <div className="marque-part w-full h-auto p-2 mt-2 mb-2 md:pt-4 md:pb-4 md:p-2">
+          <Marquee pauseOnHover className="[--duration:20s]">
+            {
+              MarqueOS.map((os) => <WorkspaceCard key={os.name} obj={os}/>)
+            }
+          </Marquee>
         </div>
       </main>
     </div >
