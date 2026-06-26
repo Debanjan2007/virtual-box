@@ -14,6 +14,7 @@ import { ToolCard } from "./ToolCard"
 import { tools } from "./Tools-children-data"
 import { LaunchWorkspacePreview } from "./bento/LaunchWorkspacePreview"
 import { ToolsTamplete } from "./TampleteTool"
+import { Safari } from "@/components/ui/safari"
 
 export default function Home() {
   return (
@@ -219,7 +220,11 @@ export default function Home() {
             </div>
           </div>
           <div className="browser rounded-lg w-full border-white/10 bg-white/[0.03] backdrop-blur-sm">
-            <div className="contain"></div>
+            <Safari
+              url="workspace-7f42.vbox.run"
+              imageSrc="/workspace-preview.png"
+              className="max-w-full max-h-full"
+            />
           </div>
           <div className="infrustructure rounded-lg w-full border-white/10 bg-white/[0.03] backdrop-blur-sm">
             <div className="contain"></div>
