@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { MobileMenu } from "./MobileNav"
-import { useState , useEffect } from "react"
+import { useState, useEffect } from "react"
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
 import { HeroTtile } from './hero-title'
 import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern"
@@ -14,12 +14,13 @@ import { MarqueOS } from "./Marque-children-data"
 import { ToolCard } from "./ToolCard"
 import { tools } from "./Tools-children-data"
 import { LaunchWorkspacePreview } from "./bento/LaunchWorkspacePreview"
-import { ToolsTamplete , ToolsTampleteSmall } from "./bento/TampleteTool"
+import { ToolsTamplete, ToolsTampleteSmall } from "./bento/TampleteTool"
 import { Safari } from "@/components/ui/safari"
-import { AnimatedInfa }  from "./bento/AnimatedLine"
+import { AnimatedInfa } from "./bento/AnimatedLine"
+import { IsolatedSessions } from "./bento/IsolatedSessions"
 
 export default function Home() {
-  const [screenSize , setScreenSize] = useState(window.innerWidth)
+  const [screenSize, setScreenSize] = useState(window.innerWidth)
   useEffect(() => {
     (() => {
       const screen = window.innerWidth
@@ -236,8 +237,8 @@ export default function Home() {
               className="max-w-full max-h-full"
             />
           </div>
-          <div className="infrustructure rounded-lg w-full border-white/10 bg-white/[0.03] backdrop-blur-sm">
-            <div className="contain"></div>
+          <div className="infrastructure relative overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] backdrop-blur-sm p-4">
+            <IsolatedSessions />
           </div>
           <div className="isolation w-full rounded-lg border-white/10 bg-white/[0.03] backdrop-blur-sm">
             <AnimatedInfa />
