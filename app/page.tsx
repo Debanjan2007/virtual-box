@@ -19,7 +19,7 @@ import { Safari } from "@/components/ui/safari"
 import { AnimatedInfa } from "./bento/AnimatedLine"
 import { IsolatedSessions } from "./bento/IsolatedSessions"
 import { Globe } from "@/components/ui/globe"
-import { marker } from "motion/react-client";
+import Footer from "./Footer"
 
 export default function Home() {
   const [screenSize, setScreenSize] = useState(window.innerWidth)
@@ -345,7 +345,10 @@ export default function Home() {
           <div className="relative h-[500px] block">
             <Globe config={globeConfig}/>
           </div>
-          <div className="footer h-[100px]"></div>
+          <footer className="footer w-full mt-2">
+            <Footer />            
+          </footer>
+
         </div>
       </main >
     </div >
