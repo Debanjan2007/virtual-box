@@ -12,7 +12,7 @@ import { WorkspaceCard } from "./WorkspaceCard"
 import { MarqueOS } from "./Marque-children-data"
 import { ToolCard } from "./ToolCard"
 import { tools } from "./Tools-children-data"
-
+import { LaunchWorkspacePreview } from "./bento/LaunchWorkspacePreview"
 
 export default function Home() {
   return (
@@ -208,7 +208,7 @@ export default function Home() {
         lg:auto-rows-[22rem]
         grid-cols-1 p-2 md:grid md:grid-cols-2 gap-4">
           <div className="w-full launch border-white/10 bg-white/[0.03] backdrop-blur-sm row-span-2">
-            <div className="contain"></div>
+            <LaunchWorkspacePreview />
           </div>
           <div className="templates w-full border-white/10 bg-white/[0.03] backdrop-blur-sm">
             <div className="contain"></div>
@@ -223,7 +223,7 @@ export default function Home() {
             <div className="contain"></div>
           </div>
         </div>
-      </main>
+      </main >
     </div >
   );
 }
