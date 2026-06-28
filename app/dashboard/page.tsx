@@ -2,8 +2,8 @@
 
 export default function Dashboard(){
     return (
-        <div className="container flex justify-center items-center">
-            <p className="text-5xl">Dashboard</p>
+        <div className="container h-screen w-screen flex justify-center items-center">
+            <p>Dashboard</p>
         </div>
     )
 }
