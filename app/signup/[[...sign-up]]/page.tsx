@@ -2,6 +2,6 @@
 
 export default function Signup() {
     return <div className='h-screen w-screen flex justify-center items-center'>
-        <SignUp forceRedirectUrl="/auth/callback"/>
+        <SignUp forceRedirectUrl="/auth/signup/callback"/>
     </div>
 }
