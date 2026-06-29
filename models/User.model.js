@@ -1,6 +1,6 @@
-﻿import { Schema , model } from "mongoose";
+﻿import mongoose from "mongoose";
 
-const UserSchema = new Schema({
+const UserSchema = new mongoose.Schema({
     clerkUid: {
         type: String,
         unique: true,
@@ -34,4 +34,8 @@ const UserSchema = new Schema({
 })
 
 
-export const User = model("User" , UserSchema)
+const User = mongoose.models.User || mongoose.model('User', UserSchema);
+
+export {
+    User
+}
