@@ -2,6 +2,6 @@
 
 export default function Login() {
     return <div className='h-screen w-screen flex justify-center items-center'>
-        <SignIn />
+        <SignIn forceRedirectUrl="/auth/signin/callback"/>
     </div>
 }
