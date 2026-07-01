@@ -14,7 +14,7 @@ export function MobileMenu() {
     return (
         <Sheet>
             <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="lg">
                     <Menu />
                 </Button>
             </SheetTrigger>
